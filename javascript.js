@@ -1,6 +1,32 @@
-function Account(firstName, lastName, balance) {
+// function Mammal(age) {
+//     this.hair = true;
+//     this.blood = "warm";
+//     this.age = age;
+// }
+
+// function Person(name, nationality, age) {
+//     Mammal.call(this, age)
+//     this. name = name;
+//     this.nationality = nationality;
+// }
+
+// Person.protoype = new Mammal();
+
+// Person.prototype.secondNationality = function(secondNationality) {
+//     this.secondNationality = secondNationality;
+// }
+
+// var john = new Person("John Miller", "German", 23);
+// john.secondNationality("French");
+// console.log(john)
+
+function Person(firstName, lastName) {
     this.firstName = firstName;
-    this.lastName = lastName;
+    this.lastName = lastName; 
+}
+
+function Account(balance, firstName, lastName) {
+    Person.call(this, firstName, lastName)
     this.balance = balance;
 }
 
